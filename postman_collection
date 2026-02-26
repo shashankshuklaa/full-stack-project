@@ -1,0 +1,254 @@
+{
+  "info": {
+    "_postman_id": "221f143a-28e8-45d6-86c8-7dd1a454cf65",
+    "name": "Internship Task API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "52709701",
+    "_collection_link": "https://go.postman.co/collection/52709701-221f143a-28e8-45d6-86c8-7dd1a454cf65?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Register",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"name\": \"Test User\",\r\n  \"email\": \"test@gmail.com\",\r\n  \"password\": \"123456\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/auth/register",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "auth",
+            "register"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Login",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"email\": \"test@gmail.com\",\r\n  \"password\": \"123456\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/auth/login",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "auth",
+            "login"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Profile",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5OWY2MzJiYThjMGNiNTQwZTg3NmU1ZCIsImlhdCI6MTc3MjEwMTg0MCwiZXhwIjoxNzcyMTg4MjQwfQ.ZjHh-2kz7OFtcqxHyD13czkNfBiSL-eXLnG5aWttdpE",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"email\": \"test@gmail.com\",\r\n  \"password\": \"123456\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/auth/profile",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "auth",
+            "profile"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Create Task",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5OWY2MzJiYThjMGNiNTQwZTg3NmU1ZCIsImlhdCI6MTc3MjEwMTg0MCwiZXhwIjoxNzcyMTg4MjQwfQ.ZjHh-2kz7OFtcqxHyD13czkNfBiSL-eXLnG5aWttdpE",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{{\r\n  \"title\": \"Test Task\",\r\n  \"description\": \"Testing\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/tasks",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "tasks"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Task",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5OWY2MzJiYThjMGNiNTQwZTg3NmU1ZCIsImlhdCI6MTc3MjEwMTg0MCwiZXhwIjoxNzcyMTg4MjQwfQ.ZjHh-2kz7OFtcqxHyD13czkNfBiSL-eXLnG5aWttdpE",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{{\r\n  \"title\": \"Test Task\",\r\n  \"description\": \"Testing\"\r\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/tasks",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "tasks"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update Task",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5OWY2MzJiYThjMGNiNTQwZTg3NmU1ZCIsImlhdCI6MTc3MjEwMTg0MCwiZXhwIjoxNzcyMTg4MjQwfQ.ZjHh-2kz7OFtcqxHyD13czkNfBiSL-eXLnG5aWttdpE",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{{\r\n  \"title\": \"Test Task\",\r\n  \"description\": \"Testing\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/tasks",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "tasks"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete Task",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/tasks",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "tasks"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
